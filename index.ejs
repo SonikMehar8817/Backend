@@ -1,0 +1,78 @@
+<!-- <%- include('./partials/header') %>
+ 
+     <h1>sonik</h1>
+
+<%- include('./partials/footer') %> -->
+
+<!-- <%- include('./partials/header') %>
+  
+       <h1>main</h1>
+
+<%- include('./partials/footer') %> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <fieldset>
+        <legend>GET</legend>
+ <form action="user" method=>
+        <label for="name">name:</label>
+        <input type="text" name="name" id="name" placeholder="name"><br><br>
+        <label for="email">email:</label>
+        <input type="email" name="email" id="email" placeholder="email"><br><br>
+        <label for="password">password:</label>
+        <input type="password" name="password" id="password" placeholder="password"><br><br>
+        <button type="submit">submit</button>
+    </form>
+    </fieldset>
+
+    <fieldset>
+        <legend>POST</legend>
+    <form action="user" method="post">
+        <label for="name">name:</label>
+        <input type="text" name="name" id="name" placeholder="name"><br><br>
+        <label for="email">email:</label>
+        <input type="email" name="email" id="email" placeholder="email"><br><br>
+        <label for="password">password:</label>
+        <input type="password" name="password" id="password" placeholder="password"><br><br>
+        <button type="submit">submit</button>
+    </form>
+    </fieldset>
+</body>
+</html> -->
+
+<!-- ________________Crud Opretion_____________________________ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <H1>CRUD</H1>
+
+    <% for(let i of comments){ %>
+    <h2>id:<%=i.id%></h2>
+
+    <h2>name:<%=i.username%></h2>
+
+    <h2>comment:<%=i.comment%></h2>
+
+     <a href="/blog/<%= i.id %> ">edit</a>
+    <form action="/blog/<%=i.id%>?_method=delete" method="post">
+      <button>delete</button>
+    </form>
+    <hr />
+    <% }%>
+  </body>
+</html>
+
+

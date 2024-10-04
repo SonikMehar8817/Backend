@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Crud</h1>
+ <% for(let i of comments){%>
+    <h3>id:<%=i.id%></h3>
+    <h3>name:<%=i.username%></h3>
+    <h3>comment:<%=i.comment%></h3>
+    <a href="/blog/<%=i.id%>">edit</a>
+    <hr>
+ <% }%>
+</body>
+</html>
